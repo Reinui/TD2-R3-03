@@ -2,6 +2,8 @@ package com.mycompany.app;
 
 import static org.junit.Assert.assertTrue;
 
+import java.beans.Transient;
+
 import org.junit.Test;
 
 /**
@@ -28,5 +30,20 @@ public class AppTest
         assert("Hello World!" == App.hello());
     }
 
+    /**
+     * Test de Echo avec des mots égaux
+     */
+    @Test 
+    public void testEchoSimilaire(){
+        assert("test" == App.echo("test"));
+    }
     
+
+      /**
+     * Test de Echo avec des mots différents
+     */
+    @Test 
+    public void testEchoDifferents(){
+        assertTrue("vache" != App.echo("mouton"));
+    }
 }
