@@ -10,10 +10,17 @@ public class App
     {
         System.out.println( hello());
        
+        System.out.println("Echo : "+echo("mouton"));
     }
 
     public static String hello(){
         
         return "Hello World!";
+    }
+
+    public static String echo(String pfMot){
+        String mot ="";
+        mot = pfMot;
+        return mot;
     }
 }
